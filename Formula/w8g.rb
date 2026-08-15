@@ -1,11 +1,12 @@
 class W8g < Formula
   desc "Self hot update CLI for Flutter apps (w8g)"
   homepage "https://github.com/weippp09/w8g"
-  version "0.1.0"
+  version "0.1.1"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/weippp09/w8g/releases/download/v0.1.0/w8g-darwin-arm64.zip"
-    sha256 "49036fc346e2d54655506691946ba72f29f3871e16ee6cbd09ab07067e132c3a"
+  # 用物理 CPU 架构判断（兼容 Intel 版 Homebrew 跑在 Apple Silicon 上的场景）
+  if Hardware::CPU.physical_cpu_arm64?
+    url "https://github.com/weippp09/w8g/releases/download/v0.1.1/w8g-darwin-arm64.zip"
+    sha256 "82a335c49944e048d1752b2c8d67e5a086223482c4d8adc5536013b821ba6977"
   else
     odie "w8g 目前仅提供 macOS arm64 二进制，请使用 Apple Silicon Mac 安装"
   end
