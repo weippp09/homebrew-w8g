@@ -3,7 +3,8 @@ class W8g < Formula
   homepage "https://github.com/weippp09/w8g"
   version "0.1.0"
 
-  if Hardware::CPU.arm?
+  # 用物理 CPU 架构判断（兼容 Intel 版 Homebrew 跑在 Apple Silicon 上的场景）
+  if Hardware::CPU.physical_cpu_arm64?
     url "https://github.com/weippp09/w8g/releases/download/v0.1.0/w8g-darwin-arm64.zip"
     sha256 "49036fc346e2d54655506691946ba72f29f3871e16ee6cbd09ab07067e132c3a"
   else
