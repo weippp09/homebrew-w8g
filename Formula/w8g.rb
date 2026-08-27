@@ -6,7 +6,7 @@ class W8g < Formula
   # 用物理 CPU 架构判断（兼容 Intel 版 Homebrew 跑在 Apple Silicon 上的场景）
   if Hardware::CPU.physical_cpu_arm64?
     url "https://github.com/weippp09/w8g/raw/main/w8g-darwin-arm64.zip"
-    sha256 "51c264d220bb925bfd3eb1cab4c47ebfcc8bdd41a5726733c24a0a5d27df612b"
+    sha256 "49927a1dcb248c3448eab65cd8b1c64b1f2c6bf2344d496ba0a3f121ff6341e1"
   else
     odie "w8g 目前仅提供 macOS arm64 二进制，请使用 Apple Silicon Mac 安装"
   end
