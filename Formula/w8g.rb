@@ -7,7 +7,7 @@ class W8g < Formula
   if Hardware::CPU.physical_cpu_arm64?
     # 版本化资产地址（内容不可变，避免 raw/main 缓存导致 sha256 校验失败）
     url "https://github.com/weippp09/w8g/releases/download/v0.1.13/w8g-darwin-arm64.zip"
-    sha256 "a718d15844fcc9817ebe63550d6e9e957fff5b01b7f3a7b7b9c39edd943c1bce"
+    sha256 "6e6ed417e539cac0732a5e77726a3b482ed1a44f4433f1606c77dc438cfb153e"
   else
     odie "w8g 目前仅提供 macOS arm64 二进制，请使用 Apple Silicon Mac 安装"
   end
